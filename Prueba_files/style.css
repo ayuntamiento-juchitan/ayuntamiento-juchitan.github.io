@@ -1,0 +1,957 @@
+/*================================================
+Default CSS
+=================================================*/
+@font-face {
+    font-family: "EncodeSansL";
+    src: url("../font/EncodeSans-Light.ttf");
+}
+@font-face {
+    font-family: "EncodeSans";
+    src: url("../font/EncodeSans-Regular.ttf");
+}
+@font-face {
+    font-family: "EncodeSansM";
+    src: url("../font/EncodeSans-Medium.ttf");
+}
+@font-face {
+    font-family: "EncodeSansB";
+    src: url("../font/EncodeSans-Bold.ttf");
+}
+
+/* Colores */
+:root{
+    --rojo:#ab0033;
+    --rojofuerte:#ab0033;
+    --beige:#ddc9a3;
+    --dorado: #bc955c;
+    --gris:#54565a;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+body {
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-family: 'EncodeSans', sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+    padding-right: 0 !important;
+}
+body.modal-open {
+    overflow: hidden !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'EncodeSansB', sans-serif;
+}
+a:hover {
+    color:#ffffff;
+}
+a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.btn-rojo{
+    background-color: var(--rojo);
+    color:#ffffff;
+    margin:20px 0px;
+}
+.btn-rojo:hover{
+    color:var(--dorado);
+}
+.btn-red{
+    background-color: var(--rojo);
+    color:#ffffff;
+}
+.btn-blanco{
+    background-color: #ffffff;
+    color:var(--dorado);
+    margin:20px 20px;
+    font-weight: 700;
+}
+.btn-blanco:hover{
+    color:var(--rojo);
+}
+.btn-dorado{
+    background-color: var(--dorado);
+    color:#ffffff;
+    margin:20px 0px;
+}
+.panel-red{
+    background-color: var(--rojofuerte);
+    color:#ffffff;
+    border-radius: 10px;
+    padding:20px 15px;
+    margin:20px 15%;
+}
+.panel-gray{
+    background-color: #e4e4e4;
+    color:#4e4e4e;
+    border-radius: 10px;
+    padding:20px 15px;
+    margin:20px 15px;
+}
+.title{
+    text-align: center;
+}
+.txt-center{
+    text-align: center;
+}
+.botones{
+    margin:20px 0px;
+}
+/*================================================
+Navbar Area CSS
+=================================================*/
+.header-area {
+    font-family: 'EncodeSans', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-link.active{
+    font-size: 14px;
+    color:var(--dorado);
+}
+.navbar-brand h2{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    margin:0px 10px;
+    font-size: 12px;
+}
+.nav-link:hover{
+    color:var(--dorado);
+    font-weight: 700;
+}
+.navbar-collapse.show {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: var(--rojofuerte);
+    border-radius: 10px;
+}
+.navbar-toggler {
+    margin-top: 10px;
+}
+.header-area.is-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        -webkit-box-shadow: 0 2px 28px 0 rgb(0 0 0 / 9%);
+        box-shadow: 0 2px 28px 0 rgb(0 0 0 / 9%);
+        background-color: var(--rojofuerte) !important;
+        -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+        color: #4e4e4e;
+}
+/*================================================
+Banner Area CSS
+=================================================*/
+
+#main-banner {
+    height: 15vh;
+    font-family: 'EncodeSans', sans-serif;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/bg-red.png);
+    color:#ffffff;
+}
+
+#main-banner .texto{
+    margin: 30px 0px 0px 100px;
+}
+#main-banner .texto p{
+    margin:0px;
+    font-size: 1vh;
+}
+#main-banner .texto h1{
+    font-size: 3vh;
+    font-weight: 800;
+}
+#main-banner .imagen{
+    margin: 20px 0px 0px 200px;
+}
+#main-banner .imagen img{
+    width: 35vh;
+}
+@media only screen and (max-width: 991px) {
+    #main-banner {
+        height: 400px;
+    }
+    #main-banner .texto{
+        margin-top: 120px;
+    }
+    #main-banner .texto p{
+        font-size: 20px;
+    }
+    #main-banner .texto h1{
+        font-size: 28px;
+    }
+    #main-banner .imagen{
+        margin: 80px 0px 0px 50px;
+    }
+    #main-banner .imagen img{
+        width: 200px;
+    }
+    .mean-container .mean-nav {
+        float: left;
+        width: 100%;
+        background: var(--rojofuerte);
+        margin-top: 44px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #main-banner {
+        height: auto;
+    }
+    #main-banner .texto{
+        margin:80px 0px 0px 0px;
+        text-align: center;
+    }
+    #main-banner .imagen{
+        margin: -160px 0px 0px 0px;
+        text-align: center;
+    }
+    #main-banner .imagen img{
+        width: 100px;
+    }
+}
+
+/*================================================
+Banner Area CSS
+=================================================*/
+#banner .carousel{
+    height: auto;
+}
+
+#banner .carousel .carousel-inner .carousel-item{
+    height: auto;
+}
+#banner .carousel .carousel-inner .carousel-item img{
+    margin:0px 0px 0px 0px;
+}
+@media only screen and (max-width: 991px) {
+    #banner .carousel .carousel-inner .carousel-item{
+        height: 216px;
+    }
+    #banner .carousel .carousel-inner .carousel-item img{
+        margin:80px 0px 0px 0px;
+    }
+}
+/*================================================
+Sub banner Area CSS
+=================================================*/
+
+#sub-banner {
+    height: 300px;
+    font-family: 'EncodeSans', sans-serif;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/bg-red.png);
+    color:#ffffff;
+}
+
+#sub-banner .texto{
+    margin: 140px 0px 0px 100px;
+}
+#sub-banner .texto p{
+    margin:0px;
+    font-size: 26px;
+}
+#sub-banner .texto h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+#sub-banner .imagen{
+    margin: 150px 0px 0px 250px;
+}
+#sub-banner .imagen img{
+    width: 250px;
+}
+@media only screen and (max-width: 991px) {
+    #sub-banner {
+        height: 400px;
+    }
+    #sub-banner .texto{
+        margin-top: 120px;
+    }
+    #sub-banner .texto p{
+        font-size: 20px;
+    }
+    #sub-banner .texto h1{
+        font-size: 28px;
+    }
+    #sub-banner .imagen{
+        margin: 160px 0px 0px 50px;
+    }
+    #sub-banner .imagen img{
+        width: 100%;
+    }
+    .mean-container .mean-nav {
+        float: left;
+        width: 100%;
+        background: var(--rojofuerte);
+        margin-top: 44px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #sub-banner {
+        height: 240px;
+    }
+    #sub-banner .texto{
+        margin:110px 0px 0px 0px;
+        text-align: center;
+    }
+    #sub-banner .imagen{
+        margin: -300px 0px 0px 0px;
+        text-align: center;
+    }
+    #sub-banner .imagen img{
+        width: 300px;
+    }
+}
+
+/*================================================
+Leyenda Area CSS
+=================================================*/
+#leyenda {
+    padding:40px 0px;
+}
+#leyenda h2{
+    text-align: center;
+    font-size: 20px;
+}
+@media only screen and (max-width: 533px) {
+    #leyenda h2{
+        font-size: 14px;
+    }
+}
+/*================================================
+Noticias Area CSS
+=================================================*/
+#noticias{
+    padding:40px 0px;
+}
+#noticias .title{
+    padding:30px 0px;
+}
+#noticias .panel-noticia{
+    border:1px solid #e4e4e4;
+    height: 400px;
+}
+#noticias .panel-noticia img{
+    width: 100%;
+}
+#noticias .panel-noticia h3{
+    padding:20px;
+    font-size: 22px;
+}
+#noticias .panel-noticia p{
+    font-size: 14px;
+    padding:0px 20px;
+    text-align: justify;
+}
+/*================================================
+Números Area CSS
+=================================================*/
+#numeros{
+    padding:40px 0px;
+}
+#numeros h2{
+    color:var(--rojofuerte);
+}
+#numeros .numero{
+    border-left:1px solid var(--rojo);
+    padding-left: 30px;
+}
+#numeros .numero h3{
+    font-size: 24px;
+}
+#numeros .numero .counter{
+    font-size: 36px;
+}
+/*================================================
+Enlaces Area CSS
+=================================================*/
+#enlaces{
+    padding:40px 0px;
+    background-color: #ffffff;
+    color:#4e4e4e;
+    text-align: center;
+}
+#enlaces h4{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 28px;
+}
+#enlaces .formatos img{
+    width: 100%;
+}
+#enlaces .formatos p{
+    text-align: center;
+    font-weight: 700;
+    margin:10px 0px;
+}
+#enlaces .panel-red i{
+    text-align: right;
+    font-size: 50px;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+#enlaces .panel-red p{
+    font-family: 'EncodeSansB', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    padding:0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+@media only screen and (max-width: 991px) {
+    #enlaces .panel-red i {
+        text-align: left;
+        font-size: 30px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 30px;
+    }
+    #enlaces .panel-red p{
+        text-align: center;
+        font-size: 14px;
+        padding:0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+}
+/*================================================
+Trámites Area CSS
+=================================================*/
+#tramites{
+    padding:40px 0px;
+    color:var(--rojofuerte);
+    text-align: left;
+}
+#tramites h3{
+    font-size: 36px;
+}
+#tramites .tramite h4{
+    font-size: 28px;
+    margin: 10px 0px;
+}
+#tramites .tramite img{
+    width: 200px;
+}
+#tramites .tramite h5{
+    font-size: 24px;
+    margin: 30px 0px;
+}
+
+/*================================================
+FAQ Area CSS
+=================================================*/
+#faq{
+    padding:40px 0px;
+    background-color: var(--rojo);
+    color: #ffffff;
+    text-align: center;
+}
+#faq h3{
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+#faq .fq{
+    text-align: justify;
+    margin:30px 0px;
+    padding:0px 40px;
+}
+#faq .fq p b{
+    font-size: 18px;
+    margin:0px;
+}
+#faq .nav-faqs{
+    margin:20px 0px;
+}
+#faq .nav-faqs .nav-pills button{
+    margin:10px 0px;
+}
+.nav-pills .nav-link.active, .nav-pills .nav-link {
+    color: #fff;
+    background-color: var(--gris);
+    font-weight: 700;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--dorado);
+    font-weight: 700;
+}
+#faq .tab-content{
+    margin:20px 0px;
+}
+#faq .nav-link.active{
+    font-size: 12px !important;
+}
+#faq .tab-content>.active {
+    margin: 0px 0px;
+    display: block;
+    font-size: 18px;
+}
+.d-flex {
+    display: block !important;
+}
+/*================================================
+Contacto Area CSS
+=================================================*/
+#contacto{
+    padding:40px 0px;
+    color: var(--dorado);
+    text-align: center;
+}
+#contacto h3{
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: var(--rojofuerte);
+}
+#contacto p{
+    color:#4e4e4e;
+    font-weight: 700;
+}
+#contacto .medio-contacto{
+    margin:40px 0px;
+}
+#contacto .medio-contacto i{
+    font-size: 60px;
+}
+/*================================================
+Obras Públicas Area CSS
+=================================================*/
+#obraspublicas{
+    padding:40px 0px;
+}
+#obraspublicas .textoop{
+    margin:20px 0px;
+}
+#obraspublicas .textoop h3{
+    color:var(--rojofuerte);
+    border-bottom: 1px solid #ab0033;
+    font-size: 24px;
+}
+#obraspublicas .textoop p{
+    font-size: 14px;
+    text-align: justify;
+}
+#obraspublicas .proyectos{
+    text-align: center;
+    padding:0px 20px;
+}
+#obraspublicas .proyectos h3{
+    font-size: 24px;
+    color:var(--rojofuerte);
+    margin:20px 0px;
+}
+#obraspublicas .proyectos .proyecto{
+    text-align: left;
+}
+#obraspublicas .proyectos .proyecto h4{
+    color: var(--dorado);
+    font-size:22px;
+}
+#obraspublicas .proyectos .proyecto img{
+    width: 100%;
+}
+#obraspublicas .proyectos .proyecto p{
+    text-align: justify;
+}
+
+/*================================================
+Verifica Permiso Area CSS
+=================================================*/
+#verificapermiso .input-group{
+    margin-top:20px;
+}
+#verificapermiso table{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+#verificapermiso table thead{
+    background-color: var(--rojo);
+    color: #ffffff;
+}
+
+/*================================================
+Verifica Licencia Area CSS
+=================================================*/
+#verificalicencia .input-group{
+    margin-bottom:20px;
+}
+#verificalicencia table{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+#verificalicencia table thead{
+    background-color: var(--rojo);
+    color: #ffffff;
+}
+#verificalicencia #datoslicencia .panel-red img{
+    width: 200px;
+    margin-bottom: 0px;
+}
+@media only screen and (max-width: 991px) {
+    #verificalicencia #datoslicencia .panel-red img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+#verificalicencia #datoslicencia .group-data span{
+    font-size: 10px;
+    font-weight: 700;
+}
+/*================================================
+Modal Area CSS
+=================================================*/
+#ModalAviso .modal-content{
+    background-color: var(--rojofuerte);
+    color:#ffffff;
+}
+#ModalAviso .modal-header,.modal-body,.modal-footer{
+    border:none;
+}
+#ModalAviso .modal-body p{
+    font-size: 24px;
+    text-align: center;
+
+}
+#ModalAviso .modal-body .logos{
+    margin-bottom:20px;
+}
+@media only screen and (max-width: 487px) {
+    #ModalAviso .modal-body .logos{
+        padding: 0px;
+    }
+    #ModalAviso .modal-body .logos img{
+        width: 80px;
+    }
+}
+
+#VerificaPermisoModal .modal-content{
+    background-color: var(--rojo);
+    color:#ffffff;
+    border: none;
+}
+#VerificaPermisoModal .modal-header,.modal-body,.modal-footer{
+    border:none;
+}
+
+#VerificaLicenciaModal .modal-content{
+    background-color: var(--dorado);
+    color:#ffffff;
+    border: none;
+}
+#VerificaLicenciaModal .modal-header,.modal-body,.modal-footer{
+    border:none;
+}
+/*================================================
+Footer Area CSS
+=================================================*/
+
+.footer-area {
+    background-color: var(--rojofuerte);
+    padding-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.single-footer-widget .logo{
+    text-align: center;
+}
+.single-footer-widget .logo a {
+    display: inline-block;
+}
+
+.single-footer-widget .logo p {
+    color: #ebe7e7;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.single-footer-widget .footer-quick-links{
+    margin-top:50px;
+}
+.single-footer-widget .footer-quick-links li {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 12px;
+    display: inline;
+}
+
+.single-footer-widget .footer-quick-links li a {
+    display: inline-block;
+    color: #ebe7e7;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.single-footer-widget .footer-quick-links li a:hover {
+    color: var(--dorado);
+    font-weight: 700;
+}
+
+.single-footer-widget .footer-contact-info {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.single-footer-widget .footer-contact-info li {
+    color: #ebe7e7;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.single-footer-widget .footer-contact-info li span {
+    display: inline-block;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.single-footer-widget .footer-contact-info li a {
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+}
+
+.single-footer-widget .footer-contact-info li a::before {
+    width: 100%;
+    height: 1px;
+    background-color: var(--dorado);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.single-footer-widget .footer-contact-info li a:hover {
+    color: var(--dorado);
+}
+
+.single-footer-widget .footer-contact-info li:last-child {
+    margin-bottom: 0;
+}
+
+.single-footer-widget .footer-contact-info li:last-child a::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.copyright-area {
+    margin-top: 40px;
+    border-top: 1px solid var(--dorado);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.copyright-area p {
+    color: #ebe7e7;
+    font-size: 15px;
+}
+
+.copyright-area p a {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.copyright-area p a:hover {
+    color: #3aade1;
+}
+
+.copyright-area ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    text-align: right;
+}
+
+.copyright-area ul li {
+    display: inline-block;
+    color: #ebe7e7;
+    font-size: 15px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.copyright-area ul li a {
+    display: inline-block;
+    color: #ebe7e7;
+}
+
+.copyright-area ul li a:hover {
+    color: #3aade1;
+}
+
+.copyright-area ul li::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -13px;
+    width: 1px;
+    height: 14px;
+    background-color: #ffffff;
+}
+
+.copyright-area ul li:last-child {
+    margin-right: 0;
+}
+
+.copyright-area ul li:last-child::before {
+    display: none;
+}
+
+.copyright-area ul li:first-child {
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .copyright-area ul {
+        padding-left: 0;
+        margin-top: 20px;
+        list-style-type: none;
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .single-footer-widget {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .single-footer-widget img{
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 533px) {
+
+    .single-footer-widget .footer-quick-links {
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+
+}
+/*================================================
+Go Top CSS
+=================================================*/
+
+.go-top {
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    right: 15px;
+    color: #ffffff;
+    background-color: var(--dorado);
+    z-index: 4;
+    width: 40px;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .9s;
+    transition: .9s;
+}
+
+.go-top.active {
+    top: 98%;
+    -webkit-transform: translateY(-98%);
+    transform: translateY(-98%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-top i {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.go-top i:last-child {
+    opacity: 0;
+    visibility: hidden;
+    top: 60%;
+}
+
+.go-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #3aade1;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.go-top:hover,
+.go-top:focus {
+    color: #ffffff;
+}
+
+.go-top:hover::before,
+.go-top:focus::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-top:hover i:first-child,
+.go-top:focus i:first-child {
+    opacity: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.go-top:hover i:last-child,
+.go-top:focus i:last-child {
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+}
